@@ -19,7 +19,7 @@ function setDataForm(event) {
 
 function getDataForm() {
     const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    console.log(savedData);
+    // console.log(savedData);
     if (savedData) {
         emailRef.value = savedData.email;
         messageRef.value = savedData.message;
