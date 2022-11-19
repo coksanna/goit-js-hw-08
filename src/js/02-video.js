@@ -9,6 +9,5 @@ player.setCurrentTime(getContentOfLocalStorage.seconds || 0);
 
 function setWatchingTime(data) {
     // console.log(data);
-    return localStorage.setItem('videoplayer-current-time', JSON.stringify(data));
-    
- }
+    return localStorage.setItem('videoplayer-current-time', JSON.stringify(data));    
+}
