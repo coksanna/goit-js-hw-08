@@ -20,22 +20,19 @@ function setDataForm(event) {
 
 function getDataForm() {
     const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    // console.log(savedData);
-    if (savedData.email) {
-        emailRef.value = savedData.email; 
-    } else {
-        emailRef.value = '';
+    const savedEmail = savedData.email;
+    const savedMessage = savedData.message;
+
+    if (savedMessage) {
+        messageRef.value = savedMessage;
+        formData.message = messageRef.value;
     }
-    if (savedData.message) {
-        messageRef.value = savedData.message;
-    } else {
-        messageRef.value = '';
+       
+    if (savedEmail) {
+        emailRef.value = savedEmail;
+        formData.email = emailRef.value;
     }
-    // if (savedData) {
-    //     emailRef.value = savedData.email;
-    //     messageRef.value = savedData.message;
-    // }
-};
+}
 
 function onFormSubmit(event) {
     event.preventDefault();
